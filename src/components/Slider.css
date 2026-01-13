@@ -1,0 +1,66 @@
+/* src/components/Slider.css */
+.slider-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+  
+}
+
+/* fixed card area */
+.slide {
+  display: none;
+}
+
+/* only show active */
+.slide.active {
+  display: block;
+}
+
+.content {
+  width: 100%;
+  height: 400px; /* fixed height for cards */
+  overflow: hidden;
+}
+
+.content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills container with crop */
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  transform: translateY(-50%);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
