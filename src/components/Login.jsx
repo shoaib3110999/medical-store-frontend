@@ -20,13 +20,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-<<<<<<< HEAD
-      const res = await axios.post("https://medical-store-backend-sztf.onrender.com/api/auth/login", formData);
-=======
       const res = await axios.post("https://medical-store-backend-sztf.onrender.com/login", formData);
->>>>>>> 2228a251de842bcf2238ccb3233aeb0f44cac1bf
-
-
 
       console.log("User Data:", res.data);
 
