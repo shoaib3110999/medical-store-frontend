@@ -19,7 +19,7 @@ const ForgotPassword = () => {
         setMessage("");
 
         try {
-            const res = await axios.post("http://localhost:5000/api/auth/forgot-password", { email });
+            const res = await axios.post("https://medical-store-backend-sztf.onrender.com/api/auth/forgot-password", { email });
             setMessage(res.data.message);
             setStep(2);
         } catch (err) {
@@ -35,7 +35,7 @@ const ForgotPassword = () => {
         setError("");
 
         try {
-            const res = await axios.post("http://localhost:5000/api/auth/reset-password", {
+            const res = await axios.post("https://medical-store-backend-sztf.onrender.com/api/auth/reset-password", {
                 email,
                 otp,
                 newPassword

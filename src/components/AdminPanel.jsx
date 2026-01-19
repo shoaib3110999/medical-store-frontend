@@ -20,7 +20,7 @@ const AdminPanel = () => {
 
     const fetchAppointments = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/api/appointments");
+            const res = await axios.get("https://medical-store-backend-sztf.onrender.com/api/appointments");
             setAppointments(res.data);
         } catch (err) {
             console.error("Error fetching appointments:", err);
@@ -29,7 +29,7 @@ const AdminPanel = () => {
 
     const fetchUsers = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/api/auth/users");
+            const res = await axios.get("https://medical-store-backend-sztf.onrender.com/api/auth/users");
             setUsers(res.data);
         } catch (err) {
             console.error("Error fetching users:", err);
@@ -38,7 +38,7 @@ const AdminPanel = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/appointments/${id}`);
+            await axios.delete(`https://medical-store-backend-sztf.onrender.com/api/appointments/${id}`);
             fetchAppointments();
         } catch (err) {
             console.error("Error deleting:", err);
@@ -48,7 +48,7 @@ const AdminPanel = () => {
     const handleStatusToggle = async (id, currentStatus) => {
         const newStatus = currentStatus === 'Pending' ? 'Complete' : 'Pending';
         try {
-            await axios.put(`http://localhost:5000/api/appointments/${id}`, { status: newStatus });
+            await axios.put(`https://medical-store-backend-sztf.onrender.com/api/appointments/${id}`, { status: newStatus });
             fetchAppointments();
         } catch (err) {
             console.error("Error updating status:", err);

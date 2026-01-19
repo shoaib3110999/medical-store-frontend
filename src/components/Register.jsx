@@ -38,7 +38,7 @@ const Register = () => {
 
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/auth/send-registration-otp", {
+      await axios.post("https://medical-store-backend-sztf.onrender.com/api/auth/send-registration-otp", {
         email: formData.email,
         password: formData.password
       });
@@ -58,7 +58,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/api/auth/register", formData);
+      await axios.post("https://medical-store-backend-sztf.onrender.com/api/auth/register", formData);
       setSuccess("Registration Successful! Redirecting...");
       setTimeout(() => {
         navigate("/login");

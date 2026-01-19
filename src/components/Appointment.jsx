@@ -24,7 +24,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/appointments", formData);
+      await axios.post("https://medical-store-backend-sztf.onrender.com/api/appointments", formData);
 
       // Construct WhatsApp Message
       const message = `Hello, I would like to book an appointment.%0A%0A` +
